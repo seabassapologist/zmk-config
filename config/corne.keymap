@@ -7,12 +7,15 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
 
 #define BTP0 &bt BT_SEL 0
 #define BTP1 &bt BT_SEL 1
 #define BTP2 &bt BT_SEL 2
 #define BTP3 &bt BT_SEL 3
 #define BTP4 &bt BT_SEL 4
+#define BTOG &out OUT_TOG
+
 / {
         keymap {
                 compatible = "zmk,keymap";                              
@@ -38,7 +41,7 @@
 //                         | GUI | SPC | LWR |   | RSE | SPC | DEL |
                         bindings = <
    &trans        &kp N1    &kp N2    &kp N3    &kp N4    &kp N5         &kp N6    &kp N7     &kp N8    &kp N9    &kp N0    &kp BSPC
-   &trans        &kp N6    &kp N7    &kp N8    &kp N9    &kp N0         BTP0      BTP1       BTP2      BTP3      BTP4      &bt BT_CLR
+   &trans        &kp N6    &kp N7    &kp N8    &kp N9    &kp N0         BTP0      BTP1       BTP2      BTP3      BTOG      &bt BT_CLR
    &kp F1        &kp F2    &kp F3    &kp F4    &kp F5    &kp F6         &kp F7    &kp F8     &kp F9    &kp F10   &kp F11   &kp F12
                                      &trans    &trans    &trans         &trans    &trans     &trans
                         >;
