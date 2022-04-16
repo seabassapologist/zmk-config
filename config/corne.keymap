@@ -16,8 +16,6 @@
 #define BTP4 &bt BT_SEL 4
 #define BTOG &out OUT_TOG
 
-//&kscan0 { debounce-period = <12>; };
-
 / {
         keymap {
                 compatible = "zmk,keymap";                              
